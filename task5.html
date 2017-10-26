@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label>Ivesk zodi</label>
+    <input id="word">
+    <div id="result"></div>
+    <button onclick="transform()">go</button>
+</body>
+<script type="text/javascript">
+function transform() {
+var word = document.getElementById("word").value;
+var result = document.getElementById("result");
+var newWord = "";
+for (var i = 0; i < word.length; i++) {
+    if(word[i] == word[i].toUpperCase()) {
+        newWord += word[i].toLowerCase();
+    }
+    if(word[i] == word[i].toLowerCase()) {
+        newWord += word[i].toUpperCase();
+    }
+}
+    result.innerHTML = newWord;
+
+}
+</script>
+</html>

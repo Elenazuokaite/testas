@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+
+var array = ['*', '$', '$', '*', '&', '*', '&', '#', '*', '#', '%', '*', '@'];
+var count = 1;
+var popular;
+var elementCount = 0;
+
+ for (var i = 0; i < array.length; i++) {
+
+    for(var j = 1; j < array.length; j++) {
+
+        if (array[i] == array[j]){
+            
+
+            elementCount++;
+            if (elementCount > count) {
+
+                popular = array[i];
+                count = elementCount;
+            } 
+        }
+    }
+    elementCount = 0; 
+}  
+document.write(popular + " pasikartojo " + count + " kartus"); 
+
+</script>
+</html>

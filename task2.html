@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label>Pirmas skaicius</label>
+    <input type="number" id="firstNumber">
+    <label>Antras skaicius</label>
+    <input type="number" id="secondNumber">
+    <button onclick="check()">Tikrinti</button>
+    <div id="answer"></div>
+    
+</body>
+<script type="text/javascript">
+function check() {
+    var firstNumber = parseInt(document.getElementById("firstNumber").value);
+    var secondNumber = parseInt(document.getElementById("secondNumber").value);
+
+     
+    var i = 0;
+    while(firstNumber >= secondNumber) {
+        firstNumber = firstNumber - secondNumber;
+        i++
+    }
+   
+    document.getElementById("answer").innerHTML = i;   
+}
+</script>
+</html>
